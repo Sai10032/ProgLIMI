@@ -1,0 +1,7 @@
+/home/vatom/clion-2016.3.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/vatom/CLionProjects/untitled
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   program_options
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/vatom/CLionProjects/untitled/cmake-build-debug
