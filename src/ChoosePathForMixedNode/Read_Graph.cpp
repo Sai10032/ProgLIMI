@@ -1,21 +1,19 @@
 #include "Read_Graph.h"
 
-BGraph ReadTopology(string Filename) {
-
+BGraph ReadTopology(const string &Filename) {
     BGraph bgraph;
     ifstream fin;
     ofstream fout;
     fin.open(Filename.c_str());
     if (!fin) {
         cerr << "文件打开失败" << endl;
-        exit(1);
+        _exit(1);
     }
     int numSDNnodes;
     int SDNnode;
     vector<int> SDNnodes;
     fin >> numSDNnodes;
     for (int i = 0; i < numSDNnodes; i++) {
-
         fin >> SDNnode;
         SDNnodes.push_back(SDNnode);
     }
@@ -40,7 +38,8 @@ BGraph ReadTopology(string Filename) {
     cout << "冗余边数目：" << numRedundantEdge << endl;
 
     property_map<BGraph, is_SDN_t>::type Is_SDN = get(is_SDN_t(), bgraph);
-    Vertex_i vb, ve;
+    Vertex_i vb;
+    Vertex_i ve;
     boost::tie(vb, ve) = vertices(bgraph);
     for (; vb != ve; vb++) {
         Is_SDN[*vb] = false;

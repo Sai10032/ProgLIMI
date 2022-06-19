@@ -1,24 +1,18 @@
-// ChoosePathForMixedNode.cpp : ????????????????????
-//
-
-#include <iostream>
 #include <boost/graph/biconnected_components.hpp>
 #include <boost/numeric/ublas/matrix.hpp>
-
+#include <iostream>
 #include "Boost_Graph.h"
 #include "Path_Selection.h"
 
-
-int main(int argc, char *argv[]) {
-    string filename, fileresultname;
+int main(int /*argc*/, char* /*argv*/[]) {
+    string filename;
+    string fileresultname;
     string matrixname;
-
 
     vector<string> vecIndex;
 
     string prefixTopo;
     string prefixResult;
-
 
     prefixTopo = "GEANT23_SDN_Hybrid/";
     prefixResult = "GEANT23_SDN_Hybrid_result/";
@@ -40,4 +34,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
